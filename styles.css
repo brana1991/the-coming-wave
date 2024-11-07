@@ -1,0 +1,62 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+}
+
+ul {
+  list-style: none;
+}
+
+.discount__container {
+  display: flex;
+  justify-content: center;
+  background-color: #222222;
+  height: 56px;
+}
+
+.discount {
+  display: flex;
+  align-items: center;
+  color: white;
+  font-size: 18px;
+  letter-spacing: 1px;
+}
+
+.landingPage {
+  height: 1024px;
+}
+
+.navbar__container {
+  height: 142px;
+  border-bottom: 1px solid #222222;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 56px 80px 0 80px;
+}
+
+.landingTitle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 882px;
+  padding-top: 130px;
+  padding-bottom: 112px;
+}
+
+.pills {
+  display: flex;
+  padding-top: 84px;
+  gap: 220px;
+}
