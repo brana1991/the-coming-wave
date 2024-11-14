@@ -35,7 +35,7 @@ a {
 .container {
   width: 100%;
   max-width: 1680px;
-  padding: 0 40px;
+  padding: 0 30px;
   margin: 0 auto;
 
   @media screen and (min-width: 1200px) {
@@ -63,7 +63,23 @@ a {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 84px 0;
+  gap: 15px 0;
+  padding-block: 40px;
+
+  
+  @media screen and (min-width: 1200px) {
+    gap: 58px 0;
+    padding-block: 112px;
+  }
+}
+
+.hidden-heading {
+  position: absolute;
+  top:0;
+  text-indent: -9999px;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 200px;
 }
 
 .hero-navbar-wrapper {
@@ -81,23 +97,27 @@ a {
 }
 
 .hero-banner {
-  max-width: 376px;
+  flex: 1 1 auto;
+  position: relative;
 }
 
 .hero-pills {
   display: flex;
+  align-items: center;
   justify-content: space-between;
-  max-width: 632px;
-  width: 100%;
-}
-
-.pill {
-  max-width: 206px;
+  flex: 0 1 auto;
+  min-width: min(100%, 632px);
+  gap: 10px;
 }
 
 .pill-text {
   text-align: center;
   font-weight: 600;
+  font-size: 13px;
+  
+  @media screen and (min-width: 1200px) {
+    font-size: 18px;
+  }
 }
 
 .description-section {
