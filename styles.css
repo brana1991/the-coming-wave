@@ -373,7 +373,7 @@ a {
   justify-content: space-between;
   max-width: 664px;
   height: clamp(190px, 29vh, 275px);
-  margin: 172px 388px;
+  margin-block: 172px;
   font-size: 18px;
   letter-spacing: 1px;
   line-height: 24px;
