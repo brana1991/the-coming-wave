@@ -53,6 +53,7 @@ a {
 .discount-text-block {
   display: flex;
   align-items: center;
+  justify-content: center;
   color: white;
   letter-spacing: 1px;
 }
@@ -86,6 +87,22 @@ a {
   align-items: center;
   height: 118px;
   border-bottom: 1px solid #222222;
+}
+
+.logo-wrapper {
+  display: flex;
+  align-items: center;
+
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: uppercase;
+
+  gap: 0 12px;
+}
+
+.media-wrapper {
+  display: flex;
+  gap: 0 10px;
 }
 
 .hero-navbar-block {
@@ -130,18 +147,19 @@ a {
 }
 
 .description-section {
-  background-image: url(assets/img/blackBackgroundWithSquarsBig.webp);
+  min-height: 100vh;
+  background-image: url(assets/img/bg-with-squares-big.webp);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   padding-inline: 30px;
 }
 
 .description-section > div {
-  padding-block: 100px;
   max-width: 494px;
 
   @media screen and (min-width: 1200px) {
@@ -196,7 +214,7 @@ a {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto auto;
     padding: 172px 170px;
-    gap: 115px;
+    gap: 0 115px;
   }
 }
 
@@ -254,6 +272,7 @@ a {
 
   a {
     margin-left: 16px;
+    text-transform: uppercase;
   }
 }
 
@@ -273,31 +292,36 @@ a {
 
 .review-section {
   border-top: 1px solid #222222;
-  padding-bottom: 172px;
+  padding-block: 30px;
+  padding-inline: 30px;
+
+  @media screen and (min-width: 1200px) {
+    padding-block: 172px;
+  }
 }
 
 .review-wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-
-.review-quotes {
-  margin-top: 172px;
-  margin-bottom: 80px;
+  gap: 80px 0;
 }
 
 .review-container {
-  width: 578px;
-  height: 1196px;
+  max-width: 578px;
   text-align: center;
 }
 
 .review-card {
   height: 120px;
-  font-size: 18px;
+  font-size: 14px;
   letter-spacing: 1px;
-  margin-bottom: 80px;
+  margin-bottom: 50px;
+
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 80px;
+    font-size: 18px;
+  }
 
   .review-text {
     margin-bottom: 20px;
@@ -331,7 +355,7 @@ a {
 }
 
 .description-small-section {
-  background-image: url(assets/img/blackBackgroundWithSquaresSmall.webp);
+  background-image: url(assets/img/bg-with-squares-small.webp);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -339,24 +363,29 @@ a {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding-inline: 30px;
   color: white;
 }
 
 .description-small-text {
-  width: 664px;
-  height: 275px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: 664px;
+  height: clamp(190px, 29vh, 275px);
   margin: 172px 388px;
   font-size: 18px;
   letter-spacing: 1px;
   line-height: 24px;
   text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
 
   p:nth-of-type(3) {
     text-transform: uppercase;
     font-weight: 700;
+  }
+
+  p:not(:last-child) {
+    margin-bottom: 10px;
   }
 }
 
@@ -371,7 +400,7 @@ a {
 }
 
 .author-picture {
-  background-image: url(assets/img/authorImg.webp);
+  background-image: url(assets/img/author-img.webp);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 36% 50%;
@@ -409,7 +438,7 @@ a {
 
 .order-section {
   min-height: 100vh;
-  background-image: url(assets/img/starBackground.webp);
+  background-image: url(assets/img/star-bg.webp);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -462,33 +491,37 @@ a {
 .preFooter-section {
   display: flex;
   justify-content: center;
-  min-height: 40vh;
+  min-height: 43vh;
 }
 
 .preFooter-wrapper {
-  padding-top: 112px;
-  padding-bottom: 90px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   align-items: center;
-  flex: 1;
+  padding-block: 112px 90px;
 
   p {
     font-size: 18px;
-    line-height: 1.2;
+    line-height: 32px;
+    text-align: center;
   }
+}
+
+.preFooter-contact {
+  margin-block: 48px 23px;
 }
 
 .footer-section {
   display: flex;
   justify-content: center;
-  padding-top: 18px;
-  padding-bottom: 18px;
+  align-items: center;
+  padding-block: 18px;
   border-top: 1px solid #222222;
 
   img {
     margin-right: 8px;
+    aspect-ratio: 16/16;
+    object-fit: contain;
   }
 }
 
