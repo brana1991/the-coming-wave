@@ -49,9 +49,9 @@ function createReviewCard(review) {
     `;
 }
 
-// reviews.forEach((review) => {
-//   reviewsContainer.innerHTML += createReviewCard(review);
-// });
+reviews.forEach((review) => {
+  reviewsContainer.innerHTML += createReviewCard(review);
+});
 
 document.addEventListener('DOMContentLoaded', function () {
   observeDocument();
