@@ -9,13 +9,19 @@
       href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;800&display=swap"
     />
     <title>Entropija - Talas Koji Dolazi</title>
-    <script src="script.js" defer></script>
+    <script src="./scripts/script.js" defer></script>
   </head>
   <body>
     <div id="intersecting-anchor"></div>
-    <div class="discount-offer-wrapper" id="sticky-banner">
-      <p class="discount-text-block container">
-        OSTVARITE POPUST ZA KUPOVINU VISE OD 10 KNJIGA! PISITE NAM NA entropija@gmail.com
+    <div class="discount-offer-wrapper container" id="sticky-banner">
+      <p class="discount-text-block hide-on-large">
+        Kupinovinom više od 10 knjiga ostvarujete popust.
+      </p>
+      <p class="discount-text-block hide-on-large">
+        Pišite nam na <a src="email">entropija@gmail.com</a>
+      </p>
+      <p class="discount-text-block hide-on-small">
+        OSTVARITE POPUST ZA KUPOVINU VISE OD 10 KNJIGA!
       </p>
     </div>
     <header class="hero-navbar-wrapper">
@@ -87,7 +93,7 @@
             tehnologija pod kontrolom, kao ključni izazov našeg doba.
           </p>
         </div>
-        <hr class="line" />
+        <hr class="line hide-on-small" />
         <div class="offer-button-wrapper hide-on-small">
           <p>Kupovina preko Ananasa:</p>
           <a href="https://ananas.rs/proizvod/talas-koji-dolazi/2260848" class="buy-button">
@@ -96,7 +102,7 @@
         </div>
       </div>
       <div class="offer-picture">
-        <img src="assets/img/book.webp" alt="Book" />
+        <img src="assets/img/book-cover.webp" loading="lazy" alt="Book" />
       </div>
       <div class="offer-button-wrapper hide-on-large">
         <p>Kupovina preko Ananasa:</p>
@@ -105,10 +111,30 @@
         </a>
       </div>
     </section>
-    <section class="review-section">
+    <section class="review-section container">
       <div class="review-wrapper">
-        <img src="assets/img/quotes.webp" alt="Quotes" />
-        <div id="review-container-id" class="review-container"></div>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" shape-rendering="geometricPrecision" viewBox="0 0 38 32">
+          <path fill="#222" d="M.00060081 0H17.5391v14.2222C17.5391 24.0406 9.68683 32 .00060081 32V0Z"/>
+          <path fill="#fff" d="M.00060081 20.3333v4.4445C2.42216 24.7778 4.38522 22.7879 4.38522 20.3333H.00060081Z"/>
+          <path fill="#222" d="M20.4615 0H38v14.2222C38 24.0406 30.1478 32 20.4615 32V0Z"/>
+          <path fill="#fff" d="M20.4615 20.3333v4.4445c2.4216 0 4.3847-1.9899 4.3847-4.4445h-4.3847Z"/>
+        </svg>
+        <div id="review-container-id" class="review-container">
+          <script type="module"> 
+            import { reviews } from "./scripts/reviews.js"
+            const contentDiv = document.getElementById('review-container-id');
+
+            const reviewCard = reviews.map(review => 
+                `<div class="review-card">
+                  <p class="review-text">${review.text}</p>
+                  <p class="review-authorSrb"><span class="dash">------</span>${review.authorSrb}<span class="review-authorOg">&nbsp${review.authorOg}</span></p>
+                  <p class="review-occupation">${review.occupation}</p>
+                </div>`).join('');
+
+            contentDiv.innerHTML = reviewCard;
+
+          </script>
+        </div>
       </div>
     </section>
     <section class="description-small-section">

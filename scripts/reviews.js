@@ -1,4 +1,4 @@
-const reviews = [
+export const reviews = [
   {
     text: `„Izuzetan i potpuno nezaobilazan vodič za ovaj jedinstveni trenutak u ljudskoj istoriji”`,
     authorSrb: 'Erik Šmit',
@@ -41,14 +41,15 @@ const reviewsContainer = document.getElementById('review-container-id');
 
 function createReviewCard(review) {
   return `
-    <div class="review-card">
-        <p class="review-text">${review.text}</p>
-        <p class="review-authorSrb"><span class="dash">------</span>${review.authorSrb}<span class="review-authorOg">&nbsp${review.authorOg}</span></p>
-        <p class="review-occupation">${review.occupation}</p>
-    </div>  
-    `;
+      <div class="review-card">
+          <p class="review-text">${review.text}</p>
+          <p class="review-authorSrb"><span class="dash">------</span>${review.authorSrb}<span class="review-authorOg">&nbsp${review.authorOg}</span></p>
+          <p class="review-occupation">${review.occupation}</p>
+      </div>  
+      `;
 }
 
+<<<<<<< Updated upstream:script.js
 reviews.forEach((review) => {
   reviewsContainer.innerHTML += createReviewCard(review);
 });
@@ -93,3 +94,8 @@ function handleMouseMove(e) {
   document.documentElement.style.setProperty('--rotateX', rotateX);
   document.documentElement.style.setProperty('--rotateY', rotateY);
 }
+=======
+// reviews.forEach((review) => {
+//   reviewsContainer.innerHTML += createReviewCard(review);
+// });
+>>>>>>> Stashed changes:scripts/reviews.js
