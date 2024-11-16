@@ -432,7 +432,11 @@ a {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 80px 0;
+  gap: 40px 0;
+
+  @media screen and (min-width: 1200px) {
+    gap: 80px 0;
+  }
 
   svg {
     width: 15px;
@@ -447,8 +451,12 @@ a {
   max-width: 578px;
   display: flex;
   flex-direction: column;
-  gap: 50px;
+  gap: 40px;
   text-align: center;
+
+  @media screen and (min-width: 1200px) {
+    gap: 80px;
+  }
 }
 
 .review-card {
@@ -457,7 +465,6 @@ a {
 
   @media screen and (min-width: 1200px) {
     font-size: 14px;
-    margin-bottom: 80px;
     font-size: 1rem;
   }
 
@@ -501,29 +508,37 @@ a {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding-inline: 30px;
   color: white;
+  padding-inline: 30px;
 }
 
 .description-small-text {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  max-width: 664px;
-  height: clamp(190px, 29vh, 275px);
-  margin-block: 172px;
-  font-size: 18px;
+  font-size: 14px;
   letter-spacing: 1px;
   line-height: 24px;
   text-align: center;
+  max-width: 664px;
+  padding: 64px 30px;
+
+  p:not(:last-child) {
+    margin-bottom: 25px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    font-size: 18px;
+    padding: 172px 30px;
+
+    p:not(:last-child) {
+      margin-bottom: 53px;
+    }
+  }
 
   p:nth-of-type(3) {
     text-transform: uppercase;
     font-weight: 700;
-  }
-
-  p:not(:last-child) {
-    margin-bottom: 10px;
   }
 }
 
