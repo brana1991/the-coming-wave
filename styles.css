@@ -708,9 +708,10 @@ a {
   flex: 1;
   margin-top: 64px;
 
-  div:nth-of-type(2) {
+  .order-offer {
     background-color: transparent;
     margin-bottom: 48px;
+    margin-top: 64px;
     color: white;
     font-size: 18px;
   }
