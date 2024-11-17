@@ -31,6 +31,13 @@ ul {
 a {
   text-decoration: none;
 }
+p {
+  line-height: 1.38;
+}
+h2 {
+  font-size: 40px;
+  line-height: 1.2;
+}
 
 @font-face {
   font-family: 'Becket';
@@ -43,13 +50,16 @@ a {
 
 .container {
   width: 100%;
-  max-width: 1680px;
   padding: 0 30px;
   margin: 0 auto;
 
-  @media screen and (min-width: 1200px) {
-    padding: 0 80px;
+  @media screen and (min-width: 1440px) {
+    max-width: 1280px;
   }
+
+  /* @media screen and (min-width: 1440px) {
+    max-width: 1680px;
+  } */
 }
 
 .discount-offer-wrapper {
@@ -106,6 +116,8 @@ a {
   justify-content: center;
   gap: 40px 0;
   padding-block: 40px;
+  -webkit-perspective: 600;
+  perspective: 300;
 
   @media screen and (min-width: 768px) {
     -webkit-perspective: 600;
@@ -388,7 +400,7 @@ a {
 }
 
 .offer-title {
-  font-size: 26px;
+  font-size: 20px;
   margin-bottom: 40px;
 
   @media screen and (min-width: 1200px) {
