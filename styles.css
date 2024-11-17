@@ -262,15 +262,23 @@ a {
 }
 
 .description-section {
-  background-image: url(assets/img/bg-with-squares-big.webp);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  background-image: url(assets/img/rectangle-left.webp), url(assets/img/rectangle-right.webp);
+  background-color: #222222;
+  background-position: left, right;
+  background-size:
+    auto 100%,
+    auto 100%;
+  background-repeat: no-repeat, no-repeat;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   padding: 64px 30px;
+  border: 1px solid #222222;
+
+  @media screen and (max-width: 768px) {
+    background-image: none;
+  }
 
   @media screen and (min-width: 1200px) {
     padding: 244px 30px;
@@ -498,16 +506,25 @@ a {
 }
 
 .description-small-section {
-  background-image: url(assets/img/bg-with-squares-small.webp);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  background-image: url(assets/img/rectangle-left-small.webp),
+    url(assets/img/rectangle-right-small.webp);
+  background-color: #222222;
+  background-position: left, right;
+  background-size:
+    auto 100%,
+    auto 100%;
+  background-repeat: no-repeat, no-repeat;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   color: white;
   padding-inline: 30px;
+  border: 1px solid #222222;
+
+  @media screen and (max-width: 768px) {
+    background-image: none;
+  }
 }
 
 .description-small-text {
