@@ -156,6 +156,14 @@ a {
   z-index: 1;
 }
 
+.svg-icon {
+  transition: transform 0.2s ease;
+}
+
+.svg-icon:hover {
+  transform: scale(1.2);
+}
+
 .hero-navbar-block {
   display: flex;
   align-items: center;
