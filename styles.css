@@ -729,23 +729,52 @@ h2 {
   position: relative;
   min-height: 100svh;
   display: flex;
+  padding-block: 48px;
 
-  > div {
+  .container {
     flex: 1;
-    display: grid;
-    max-width: 1212px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
 
-    @media screen and (min-width: 1200px) {
-      grid-template-columns: min-content 316px min-content;
+    > p {
+      color: white;
+      text-align: center;
+    }
+  }
+
+  .grid {
+    flex: 1;
+    max-width: 1212px;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr;
+
+    @media screen and (min-width: 768px) {
+      grid-template-columns: min-content 200px min-content;
       grid-template-rows: auto auto;
       gap: 48px;
       justify-content: center;
-      align-items: center;
       align-content: center;
+      place-items: center;
+    }
+
+    @media screen and (min-width: 1200px) {
+      grid-template-columns: min-content 316px min-content;
     }
 
     img {
       width: 100%;
+    }
+
+    .order-button-wrapper {
+      display: flex;
+      justify-content: center;
+
+      @media screen and (min-width: 768px) {
+        grid-column: 2/3;
+      }
     }
   }
 
@@ -760,8 +789,17 @@ h2 {
 
   h2 {
     color: white;
-    font-size: 2.62rem;
+    font-size: 2rem;
     white-space: nowrap;
+    display: none;
+
+    @media screen and (min-width: 768px) {
+      display: block;
+    }
+
+    @media screen and (min-width: 1200px) {
+      font-size: 4rem;
+    }
   }
 }
 
