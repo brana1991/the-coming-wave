@@ -13,6 +13,34 @@
   </head>
   <body>
     <div id="intersecting-anchor"></div>
+    <div class="wrap">
+      <button
+        class="magnetic-cta"
+        style="
+          will-change: transform;
+          transform: translate3d(0.0004rem, 0.0004rem, 0px) scale3d(1, 1, 1) rotateX(0deg)
+            rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+          transform-style: preserve-3d;
+        "
+      >
+        <div hoverstagger="link" class="inner-circle" style="opacity: 1">
+          <p>Kupi</p>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="100%"
+            viewBox="0 0 27 26"
+            fill="none"
+            class="cta_arrow"
+          >
+            <path
+              d="M10.556 20.057H13.6659L21.384 12.9997L14.1654 5.94246L10.556 5.94238L16.28 11.6664H4.83203V14.3331L16.28 14.3331L10.556 20.057Z"
+              fill="white"
+            ></path>
+          </svg>
+        </div>
+      </button>
+    </div>
+
     <div class="discount-offer-wrapper container" id="sticky-banner">
       <p class="discount-text-block hide-on-large">
         Kupinovinom više od 10 knjiga ostvarujete popust.
@@ -22,7 +50,6 @@
       </p>
       <p class="discount-text-block hide-on-small">
         OSTVARITE POPUST ZA KUPOVINU VIŠE OD 10 KNJIGA!
-        <!-- PIŠITE NAM NA&nbsp;<a src="email">entropija@gmail.com</a> -->
       </p>
     </div>
     <header class="hero-navbar-wrapper">
@@ -43,8 +70,13 @@
     </header>
     <section class="hero-section container">
       <div class="hero-banner" id="hero-banner">
-        <h1 class="tagline"><span>Talas</span> <span>Koji</span><span>Dolazi</span></h1>
-        <h2 class="subheading">TEHNOLOGIJA, MOĆ I NAJVEĆA</br> DILEMA XXI VEKA</h2>
+        <h1 class="tagline">
+          <span>Talas</span> <span>Koji</span><span>Dolazi</span>
+          <div class="subheading">
+            TEHNOLOGIJA, MOĆ I NAJVEĆA<br />
+            DILEMA XXI VEKA
+          </div>
+        </h1>
       </div>
       <div class="hero-pills">
         <div class="hero-red pill">
@@ -58,11 +90,23 @@
       </div>
     </section>
     <section class="description-section">
-      <div>
-        <h2 class="description-title">
-          Približavamo se prelomnoj tački u istoriji ljudskog roda.<span>Sve će se promeniti.</span>
-        </h2>
-        <div class="description-text">
+      <div class="container">
+        <img
+          loading="lazy"
+          src="./assets/img/background-pattern-right.svg"
+          alt="background pattern"
+        />
+        <img
+          loading="lazy"
+          src="./assets/img/background-pattern-left.svg"
+          alt="background pattern"
+        />
+        <div class="description-text-box">
+          <h2 class="description-title">
+            Približavamo se prelomnoj tački u istoriji ljudskog roda.<span
+              >Sve će se promeniti.</span
+            >
+          </h2>
           <p>
             Ovo je knjiga o ključnoj tehnologiji XXI veka, o njenom sveprožimajućem uticaju i
             koracima koje moramo da preduzmemo da bi bila svima na korist.
@@ -112,33 +156,40 @@
         </a>
       </div>
     </section>
+    <hr class="section-divider" />
     <section class="review-section container">
-      <div class="review-wrapper">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" shape-rendering="geometricPrecision" viewBox="0 0 38 32">
-          <path fill="#222" d="M.00060081 0H17.5391v14.2222C17.5391 24.0406 9.68683 32 .00060081 32V0Z"/>
-          <path fill="#fff" d="M.00060081 20.3333v4.4445C2.42216 24.7778 4.38522 22.7879 4.38522 20.3333H.00060081Z"/>
-          <path fill="#222" d="M20.4615 0H38v14.2222C38 24.0406 30.1478 32 20.4615 32V0Z"/>
-          <path fill="#fff" d="M20.4615 20.3333v4.4445c2.4216 0 4.3847-1.9899 4.3847-4.4445h-4.3847Z"/>
-        </svg>
-        <div id="review-container-id" class="review-container">
-          <script type="module"> 
-            import { reviews } from "./scripts/reviews.js"
-            const contentDiv = document.getElementById('review-container-id');
+      <img src="./assets/img/apostrophe.svg" alt="apostrophe sign" loading="lazy" />
+      <div id="review-container-id" class="review-container">
+        <script type="module">
+          import { reviews } from './scripts/reviews.js';
+          const contentDiv = document.getElementById('review-container-id');
 
-            const reviewCard = reviews.map(review => 
+          const reviewCard = reviews
+            .map(
+              (review) =>
                 `<div class="review-card">
                   <p class="review-text">${review.text}</p>
                   <p class="review-authorSrb"><span class="dash">------</span>${review.authorSrb}<span class="review-authorOg">&nbsp${review.authorOg}</span></p>
                   <p class="review-occupation">${review.occupation}</p>
-                </div>`).join('');
+                </div>`,
+            )
+            .join('');
 
-            contentDiv.innerHTML = reviewCard;
-
-          </script>
-        </div>
+          contentDiv.innerHTML = reviewCard;
+        </script>
       </div>
     </section>
     <section class="description-small-section">
+      <img
+        loading="lazy"
+        src="./assets/img/background-pattern-left-small.svg"
+        alt="background pattern"
+      />
+      <img
+        loading="lazy"
+        src="./assets/img/background-pattern-right-small.svg"
+        alt="background pattern"
+      />
       <div class="description-small-text">
         <p>
           Tokom prethodnih par godina videli smo prve naznake novog, moćnog i brzo narastajućeg
@@ -153,9 +204,9 @@
       </div>
     </section>
     <section class="author-section">
-      <div class="author-info">
-        <h2>AUTORI</h2>
+      <div class="author-grid">
         <div class="author-text">
+          <h2>AUTORI</h2>
           <p>
             <span>MUSTAFA SULEJMAN</span> je izvršni direktor Majkrosoft AI-a. Prethodno je bio
             izvršni direktor i suosnivač kompanije Inflekšn AI (Inflection AI). Pre toga je bio
@@ -175,25 +226,29 @@
             The Content Machine, Curation i Human Frontiers.
           </p>
         </div>
+        <img src="./assets/img/author-image.webp" alt="author" loading="lazy" />
       </div>
-      <div class="author-picture"></div>
     </section>
     <section class="order-section">
-      <div class="order-title">
-        <div><p>NIŠTA VIŠE</p></div>
+      <img src="./assets/img/star-bg.webp" alt="star background" loading="lazy" />
+      <div class="container">
+        <h2>NIŠTA VIŠE</h2>
         <img src="assets/img/small-book-no-shadow.webp" alt="Book" />
-        <div><p>NEĆE BITI ISTO</p></div>
-      </div>
-      <div class="order-buy">
-        <div class="order-button-wrapper">
-          <a href="https://ananas.rs/proizvod/talas-koji-dolazi/2260848" class="buy-button"
-            >naruči odmah
-          </a>
-        </div>
-        <div class="order-offer">
-          <p>
-            OSTVARITE POPUST ZA KUPOVINU VIŠE OD 10 KNJIGA! PIŠITE NAM NA&nbsp;<a src="email">entropija@gmail.com</a>
-          </p>
+        <h2>NEĆE BITI ISTO</h2>
+
+        <div class="order-buy">
+          <div class="order-button-wrapper">
+            <a href="https://ananas.rs/proizvod/talas-koji-dolazi/2260848" class="buy-button"
+              >naruči odmah
+            </a>
+          </div>
+          <div class="order-offer">
+            <p>
+              OSTVARITE POPUST ZA KUPOVINU VIŠE OD 10 KNJIGA! PIŠITE NAM NA&nbsp;<a src="email"
+                >entropija@gmail.com</a
+              >
+            </p>
+          </div>
         </div>
       </div>
     </section>

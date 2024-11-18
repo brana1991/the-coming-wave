@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', function () {
-  // window.alert('bla');
   observeDocument();
   gyroscopeMove();
 });
@@ -26,16 +25,16 @@ function observeDocument() {
 }
 
 function handleMouseMove(e) {
-  const mouseX = e.pageX;
-  const mouseY = e.pageY;
+  const mouseX = e.clientX;
+  const mouseY = e.clientY;
 
   const screenWidth = window.innerWidth;
   const screenHeight = window.innerHeight;
 
-  const varX = mouseX / screenWidth;
-  const varY = mouseY / screenHeight;
-  const rotateX = (varY - 0.5) * 25 + 'deg';
-  const rotateY = (varX - 0.5) * 25 + 'deg';
+  const screenPosX = getCoordinate(mouseX, screenWidth) || 0;
+  const screenPosY = getCoordinate(mouseY, screenHeight) || 0;
+  const rotateX = screenPosY * 12 + 'deg';
+  const rotateY = screenPosX * 12 + 'deg';
 
   document.documentElement.style.setProperty('--rotateX', rotateX);
   document.documentElement.style.setProperty('--rotateY', rotateY);
@@ -71,9 +70,6 @@ function gyroscopeMove() {
       .catch((error) => console.error('Gyroscope error:', error));
   } else {
     window.addEventListener('deviceorientation', (event) => {
-      const screenWidth = window.innerWidth;
-      const screenHeight = window.innerHeight;
-
       // Normalize device orientation values
       const alpha = event.alpha / 360; // Rotation around z-axis
       const beta = (event.beta + 180) / 360; // Rotation around x-axis
@@ -86,3 +82,5 @@ function gyroscopeMove() {
     });
   }
 }
+
+const getCoordinate = (pos, dim) => Math.round(((pos - dim / 2) / (dim / 2)) * 100) / 100;
