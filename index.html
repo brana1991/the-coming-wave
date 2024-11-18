@@ -14,16 +14,8 @@
   <body>
     <div id="intersecting-anchor"></div>
     <div class="wrap">
-      <button
-        class="magnetic-cta"
-        style="
-          will-change: transform;
-          transform: translate3d(0.0004rem, 0.0004rem, 0px) scale3d(1, 1, 1) rotateX(0deg)
-            rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
-          transform-style: preserve-3d;
-        "
-      >
-        <div hoverstagger="link" class="inner-circle" style="opacity: 1">
+      <button class="magnetic-cta">
+        <div class="inner-circle" style="opacity: 1">
           <p>Kupi</p>
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -52,22 +44,22 @@
         OSTVARITE POPUST ZA KUPOVINU VIŠE OD 10 KNJIGA!
       </p>
     </div>
-    <header class="hero-navbar-wrapper">
-      <div class="hero-navbar-block container">
-        <div class="logo-wrapper">
-          <img src="assets/img/logo.webp" alt="Entropy Logo" />
-          <p>Entropija</p>
-        </div>
-        <div class="media-wrapper">
-          <a href="https://www.instagram.com/entropija_izdavastvo/"
-            ><img class="svg-icon" src="assets/img/instagram.svg" alt="Instagram Icon"
-          /></a>
-          <a href="https://www.facebook.com/profile.php?id=61550616857700">
-            <img class="svg-icon" src="assets/img/facebook.svg" alt="Facebook Icon" />
-          </a>
-        </div>
+
+    <header class="hero-navbar-wrapper container">
+      <div class="logo-wrapper">
+        <img src="assets/img/logo.webp" alt="Entropy Logo" />
+        <p>Entropija</p>
+      </div>
+      <div class="media-wrapper">
+        <a href="https://www.instagram.com/entropija_izdavastvo/"
+          ><img class="svg-icon" src="assets/img/instagram.svg" alt="Instagram Icon"
+        /></a>
+        <a href="https://www.facebook.com/profile.php?id=61550616857700">
+          <img class="svg-icon" src="assets/img/facebook.svg" alt="Facebook Icon" />
+        </a>
       </div>
     </header>
+    <hr class="section-divider" />
     <section class="hero-section container">
       <div class="hero-banner" id="hero-banner">
         <h1 class="tagline">
@@ -232,10 +224,11 @@
     <section class="order-section">
       <img src="./assets/img/star-bg.webp" alt="star background" loading="lazy" />
       <div class="container">
+        <h2 class="hide-on-large featured-heading">NIŠTA VIŠE NEĆE BITI ISTO</h2>
         <div class="grid">
-          <h2>NIŠTA VIŠE</h2>
-          <img src="assets/img/small-book-no-shadow.webp" alt="Book" />
-          <h2>NEĆE BITI ISTO</h2>
+          <h2 class="hide-on-small featured-heading">NIŠTA VIŠE</h2>
+          <img src="assets/img/small-book-no-shadow.webp" alt="Book" loading="lazy" />
+          <h2 class="hide-on-small featured-heading">NEĆE BITI ISTO</h2>
           <div class="order-button-wrapper">
             <a href="https://ananas.rs/proizvod/talas-koji-dolazi/2260848" class="buy-button"
               >naruči odmah
@@ -249,29 +242,24 @@
         </p>
       </div>
     </section>
-    <section class="preFooter-section container">
-      <div class="preFooter-wrapper">
-        <div class="logo-wrapper">
-          <img src="assets/img/logo.webp" alt="Entropy Logo" />
-          <p>Entropija</p>
-        </div>
-        <div class="preFooter-contact">
-          <p>Telefon: +381 64 5177 648</p>
-          <p>E-mail: entropija.izdavaštvo@gmail.com</p>
-        </div>
-        <div class="media-wrapper">
-          <a href="https://www.instagram.com/entropija_izdavastvo/"
-            ><img class="svg-icon" src="assets/img/instagram.svg" alt="Instagram Icon"
-          /></a>
-
-          <a href="https://www.facebook.com/profile.php?id=61550616857700">
-            <img class="svg-icon" src="assets/img/facebook.svg" alt="Facebook Icon" />
-          </a>
-        </div>
+    <footer class="footer-addendum container">
+      <div class="logo-wrapper">
+        <img src="assets/img/logo.webp" alt="Entropy Logo" loading="lazy" />
+        <p>Entropija</p>
       </div>
-    </section>
+      <a href="tel:+381 64 5177 648"><span>Telefon:</span> +381 64 5177 648</a>
+      <a href="mailto:email@example.com"><span>E-mail:</span> entropija.izdavaštvo@gmail.com</a>
+      <div class="social">
+        <a href="https://www.instagram.com/entropija_izdavastvo/"
+          ><img class="svg-icon" src="assets/img/instagram.svg" alt="Instagram Icon" loading="lazy"
+        /></a>
+        <a href="https://www.facebook.com/profile.php?id=61550616857700">
+          <img class="svg-icon" src="assets/img/facebook.svg" alt="Facebook Icon" loading="lazy" />
+        </a>
+      </div>
+    </footer>
     <section class="footer-section">
-      <img src="assets/img/c.webp" alt="C" />
+      <img src="assets/img/copyright.svg" alt="copyright" loading="lazy" />
       <p>2023 - 2024 ENTROPIJA</p>
     </section>
   </body>
