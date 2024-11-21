@@ -58,7 +58,7 @@ function handleOrientation(event) {
   const screenPosY = beta / 45;
   const screenPosX = gamma / 45;
 
-  const targetX = screenPosY * 12;
+  const targetX = screenPosY * 40;
   const targetY = screenPosX * 12;
 
   const damping = 0.6;
