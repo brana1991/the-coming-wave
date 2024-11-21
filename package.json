@@ -5,13 +5,15 @@
   "main": "index.js",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview"
+    "build": "vite build && npm run critical",
+    "preview": "vite preview",
+    "critical": "critical dist/index.html --inline --base dist --dimensions='375x667,1920x1080'"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "critical": "^7.2.1",
     "prettier": "^3.3.3",
     "vite": "^5.4.11",
     "vite-plugin-html-minifier": "^1.0.4"

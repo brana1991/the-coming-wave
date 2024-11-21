@@ -1,9 +1,91 @@
+@font-face {
+  font-family: 'Becket';
+  src:
+    url('assets/fonts/becket/beckett-medium-pro.woff2') format('woff2'),
+    url('assets/fonts/becket/a2_-_beckett_demibold-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 *,
 *::after,
 *::before {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+}
+
+body {
+  font-family: 'Open Sans', 'Beckett Medium Pro', sans-serif;
+  font-weight: normal;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -webkit-overflow-scrolling: touch;
+  color: #222222;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  font-family: 'Open Sans', sans-serif;
+}
+
+h2 {
+  &.featured-heading {
+    color: white;
+    font-size: 1.5rem;
+
+    @media screen and (min-width: 1200px) {
+      font-size: 4rem;
+    }
+  }
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+
+  &[href^='mailto'],
+  &[href^='tel'] {
+    all: unset;
+    text-align: center;
+    cursor: pointer;
+    line-height: 1.38;
+    font-size: 0.875rem;
+    text-decoration: underline;
+
+    @media screen and (min-width: 768px) {
+      font-size: 1.14rem;
+    }
+  }
+}
+
+p {
+  line-height: 1.38;
+  font-size: 0.875rem;
+
+  @media screen and (min-width: 768px) {
+    font-size: 1.14rem;
+  }
+}
+
+h2 {
+  line-height: 1.5rem;
+
+  @media screen and (min-width: 768px) {
+    font-size: 2.5rem;
+  }
 }
 
 .magnetic-cta {
@@ -77,88 +159,6 @@
   100% {
     opacity: 0;
   }
-}
-
-img {
-  max-width: 100%;
-}
-
-body {
-  font-family: 'Open Sans', sans-serif;
-  font-weight: normal;
-  -webkit-text-size-adjust: 100%;
-  -webkit-font-smoothing: antialiased;
-  -webkit-overflow-scrolling: touch;
-  color: #222222;
-}
-
-h1,
-h2,
-h3,
-h4,
-p {
-  font-family: 'Open Sans', sans-serif;
-}
-
-h2 {
-  &.featured-heading {
-    color: white;
-    font-size: 1.5rem;
-
-    @media screen and (min-width: 1200px) {
-      font-size: 4rem;
-    }
-  }
-}
-
-ul {
-  list-style: none;
-}
-
-a {
-  text-decoration: none;
-  cursor: pointer;
-
-  &[href^='mailto'],
-  &[href^='tel'] {
-    all: unset;
-    text-align: center;
-    cursor: pointer;
-    line-height: 1.38;
-    font-size: 0.875rem;
-    text-decoration: underline;
-
-    @media screen and (min-width: 768px) {
-      font-size: 1.14rem;
-    }
-  }
-}
-
-p {
-  line-height: 1.38;
-  font-size: 0.875rem;
-
-  @media screen and (min-width: 768px) {
-    font-size: 1.14rem;
-  }
-}
-
-h2 {
-  line-height: 1.5rem;
-
-  @media screen and (min-width: 768px) {
-    font-size: 2.5rem;
-  }
-}
-
-@font-face {
-  font-family: 'Becket';
-  src:
-    url('assets/fonts/becket/beckett-medium-pro.woff2') format('woff2'),
-    url('assets/fonts/becket/a2_-_beckett_demibold-webfont.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
 }
 
 .container {
