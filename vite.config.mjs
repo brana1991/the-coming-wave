@@ -2,12 +2,30 @@ import { defineConfig } from 'vite';
 import HtmlMinifier from 'vite-plugin-html-minifier';
 
 export default defineConfig({
+  plugins: [
+    HtmlMinifier({
+      removeComments: true,
+      collapseWhitespace: true,
+      preserveLineBreaks: false,
+      minifyCSS: true,
+      minifyJS: true,
+    }),
+    PluginCritical({
+      criticalUrl: 'https://nystudio107.com/',
+      criticalBase: './',
+      criticalPages: [
+        { uri: '', template: 'index' },
+        { uri: 'about', template: 'about/index' },
+      ],
+      criticalConfig: {},
+    }),
+  ],
   build: {
     outDir: 'dist', // Output directory
     minify: 'esbuild', // Use esbuild for JS and CSS minification (default)
     sourcemap: false, // Optionally disable sourcemaps in production
     rollupOptions: {
-      input: 'index.html',
+      input: 'index.html', // Ensure Vite uses this as the entry point
       output: {
         entryFileNames: 'assets/[name].[hash].js',
         chunkFileNames: 'assets/[name].[hash].js',
@@ -18,13 +36,4 @@ export default defineConfig({
     cssCodeSplit: true, // Enable CSS code splitting (default)
     emptyOutDir: true, // Clean output directory before build (default)
   },
-  plugins: [
-    HtmlMinifier({
-      removeComments: true,
-      collapseWhitespace: true,
-      preserveLineBreaks: false,
-      minifyCSS: true,
-      minifyJS: true,
-    }),
-  ],
 });
