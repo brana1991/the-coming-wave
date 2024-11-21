@@ -10,15 +10,6 @@ export default defineConfig({
       minifyCSS: true,
       minifyJS: true,
     }),
-    PluginCritical({
-      criticalUrl: 'https://nystudio107.com/',
-      criticalBase: './',
-      criticalPages: [
-        { uri: '', template: 'index' },
-        { uri: 'about', template: 'about/index' },
-      ],
-      criticalConfig: {},
-    }),
   ],
   build: {
     outDir: 'dist', // Output directory
