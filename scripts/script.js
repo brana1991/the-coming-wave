@@ -56,14 +56,7 @@ let firstOrientationEvent = true;
 function handleOrientation(event) {
   const { beta, gamma } = event;
 
-  if (firstOrientationEvent) {
-    document.documentElement.style.setProperty('--rotateX', '0deg');
-    document.documentElement.style.setProperty('--rotateY', '0deg');
-    firstOrientationEvent = false;
-    return;
-  }
-
-  const screenPosY = beta / 90;
+  const screenPosX = gamma / 45;
 
   const targetY = screenPosX * 12;
 
@@ -71,6 +64,7 @@ function handleOrientation(event) {
 
   currentY += (targetY - currentY) * damping;
 
+  document.documentElement.style.setProperty('--rotateX', '0deg');
   document.documentElement.style.setProperty('--rotateY', -currentY + 'deg');
 }
 
