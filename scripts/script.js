@@ -64,17 +64,13 @@ function handleOrientation(event) {
   }
 
   const screenPosY = beta / 90;
-  const screenPosX = gamma / 45;
 
-  const targetX = screenPosY * 12;
   const targetY = screenPosX * 12;
 
   const damping = 0.6;
 
-  currentX += (targetX - currentX) * damping;
   currentY += (targetY - currentY) * damping;
 
-  document.documentElement.style.setProperty('--rotateX', -(currentX + 15) + 'deg');
   document.documentElement.style.setProperty('--rotateY', -currentY + 'deg');
 }
 
