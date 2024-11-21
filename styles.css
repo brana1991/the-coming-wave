@@ -292,7 +292,7 @@ h2 {
 .hero-banner {
   flex: 0 1 auto;
   position: relative;
-  -webkit-perspective: 600;
+  -webkit-perspective: 300;
   perspective: 300;
 }
 
