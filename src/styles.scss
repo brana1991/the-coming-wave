@@ -1,29 +1,30 @@
 @font-face {
   font-family: 'Becket';
   src:
-    url('assets/fonts/becket/beckett-medium-pro.woff2') format('woff2'),
-    url('assets/fonts/becket/a2_-_beckett_demibold-webfont.woff') format('woff');
+    url('./assets/fonts/becket/beckett-medium-pro.woff2') format('woff2'),
+    url('./assets/fonts/becket/a2_-_beckett_demibold-webfont.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Open Sans';
-  src: url('/assets/fonts/open-sans/open-sans-v40-latin-regular.woff2') format('woff2');
-  font-weight: 400;
+  src: url('./assets/fonts/open-sans/open-sans-v40-latin-regular.woff2') format('woff2');
+  font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Open Sans';
-  src: url('/assets/fonts/open-sans/open-sans-v40-latin-800.woff2') format('woff2');
+  src: url('./assets/fonts/open-sans/open-sans-v40-latin-600.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  src: url('./assets/fonts/open-sans/open-sans-v40-latin-800.woff2') format('woff2');
   font-weight: 800;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Open Sans';
-  src: url('/assets/fonts/open-sans/open-sans-v40-latin-800.woff2') format('woff2');
   font-style: normal;
 }
 
@@ -48,10 +49,6 @@ body {
   font-weight: normal;
   -webkit-overflow-scrolling: touch;
   color: #222222;
-
-  .pill-text {
-    font-weight: 600;
-  }
 }
 
 h1,
@@ -304,6 +301,10 @@ h2 {
   align-items: center;
   text-transform: uppercase;
   gap: 0 12px;
+
+  p {
+    font-weight: 600;
+  }
 }
 
 .svg-icon {
@@ -403,7 +404,6 @@ h2 {
 .pill-text {
   text-align: center;
   font-size: 13px;
-  font-weight: 600;
 
   @media screen and (min-width: 1200px) {
     font-size: 18px;
