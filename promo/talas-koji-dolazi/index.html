@@ -3,22 +3,48 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styles.css" />
+    <meta property="og:title" content="Entropija - Talas Koji Dolazi" />
+    <meta property="og:description" content="Entropija - Talas Koji Dolazi" />
+    <meta property="og:image" content="https://example.com/path-to-your-thumbnail-image.jpg" />
+    <meta property="og:url" content="https://example.com/your-page-url" />
+    <meta property="og:type" content="website" />
+    <link rel="stylesheet" href="src/styles.scss" />
+
+    <!-- Optional (for better control over mobile devices) -->
+    <!-- <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://example.com/path-to-your-thumbnail-image.jpg" /> -->
+
     <link
       rel="preload"
-      href="/assets/fonts/becket/beckett-medium-pro.woff2"
+      href="src/assets/fonts/becket/beckett-medium-pro.woff2"
       as="font"
       type="font/woff2"
       crossorigin="anonymous"
     />
+
     <link
       rel="preload"
+      href="src/assets/fonts/open-sans/open-sans-v40-latin-600.woff2"
       as="font"
+      type="font/woff2"
       crossorigin="anonymous"
-      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;800&display=swap"
     />
+
+    <link
+      rel="preload"
+      href="src/assets/fonts/open-sans/open-sans-v40-latin-regular.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin="anonymous"
+    />
+
     <title>Entropija - Talas Koji Dolazi</title>
-    <script src="./scripts/script.js" defer></script>
+    <script src="src/scripts/script.js" defer type="module"></script>
+    <link rel="icon" href="src/assets/favicon/favicon.ico" type="image/x-icon" />
+    <link rel="manifest" href="src/assets/favicon/site.webmanifest" />
+    <link rel="icon" href="src/assets/favicon/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" href="src/assets/favicon/favicon-16x16.png" sizes="16x16" />
+    <link rel="apple-touch-icon" href="src/assets/favicon/apple-touch-icon.png" />
   </head>
   <body>
     <div id="intersecting-anchor"></div>
@@ -35,16 +61,17 @@
         <a href="mailto:email@example.com">entropija.izdavaštvo@gmail.com</a>
       </p>
     </div>
+    <button id="request-gesture-permision"></button>
     <header class="hero-navbar-wrapper container">
       <div class="logo-wrapper">
-        <img src="assets/img/logo.webp" alt="Entropy Logo" />
+        <img src="src/assets/img/logo.webp" alt="Entropy Logo" />
         <p>Entropija</p>
       </div>
       <a href="https://www.instagram.com/entropija_izdavastvo/"
-        ><img class="svg-icon" src="assets/img/instagram.svg" alt="Instagram Icon"
+        ><img class="svg-icon" src="src/assets/img/instagram.svg" alt="Instagram Icon"
       /></a>
       <a href="https://www.facebook.com/profile.php?id=61550616857700">
-        <img class="svg-icon" src="assets/img/facebook.svg" alt="Facebook Icon" />
+        <img class="svg-icon" src="src/assets/img/facebook.svg" alt="Facebook Icon" />
       </a>
     </header>
     <hr class="section-divider" />
@@ -60,11 +87,11 @@
       </div>
       <div class="hero-pills">
         <div class="hero-red pill">
-          <img src="assets/img/red-pill.webp" alt="Red Pill" />
+          <img src="src/assets/img/red-pill.webp" alt="Red Pill" />
           <p class="hero-red pill-text">SEE HOW DEEP<br />THE RABBIT HOLE GOES</p>
         </div>
         <div class="hero-blue pill">
-          <img src="assets/img/blue-pill.webp" alt="Blue Pill" />
+          <img src="src/assets/img/blue-pill.webp" alt="Blue Pill" />
           <p class="hero-blue pill-text">BELIEVE WHATEVER<br />YOU WANT TO BELIEVE</p>
         </div>
       </div>
@@ -73,12 +100,12 @@
       <div class="container">
         <img
           loading="lazy"
-          src="./assets/img/background-pattern-right.svg"
+          src="src/assets/img/background-pattern-right.svg"
           alt="background pattern"
         />
         <img
           loading="lazy"
-          src="./assets/img/background-pattern-left.svg"
+          src="src/assets/img/background-pattern-left.svg"
           alt="background pattern"
         />
         <div class="description-text-box">
@@ -126,8 +153,8 @@
           </a>
         </div>
       </div>
-      <div class="offer-picture">
-        <img src="assets/img/book-cover.webp" loading="lazy" alt="Book" />
+      <div class="offer-image">
+        <img src="src/assets/img/book-cover.webp" loading="lazy" alt="Book" />
       </div>
       <div class="offer-button-wrapper hide-on-large">
         <p>Kupovina preko Ananasa:</p>
@@ -138,10 +165,10 @@
     </section>
     <hr class="section-divider" />
     <section class="review-section container">
-      <img src="./assets/img/apostrophe.svg" alt="apostrophe sign" loading="lazy" />
+      <img src="src/assets/img/apostrophe.svg" alt="apostrophe sign" loading="lazy" />
       <div id="review-container-id" class="review-container">
         <script type="module">
-          import { reviews } from './scripts/reviews.js';
+          import { reviews } from './src/scripts/reviews.js';
           const contentDiv = document.getElementById('review-container-id');
 
           const reviewCard = reviews
@@ -162,12 +189,12 @@
     <section class="description-small-section">
       <img
         loading="lazy"
-        src="./assets/img/background-pattern-left-small.svg"
+        src="src/assets/img/background-pattern-left-small.svg"
         alt="background pattern"
       />
       <img
         loading="lazy"
-        src="./assets/img/background-pattern-right-small.svg"
+        src="src/assets/img/background-pattern-right-small.svg"
         alt="background pattern"
       />
       <div class="description-small-text">
@@ -206,16 +233,18 @@
             The Content Machine, Curation i Human Frontiers.
           </p>
         </div>
-        <img src="./assets/img/author-image.webp" alt="author" loading="lazy" />
+        <img src="src/assets/img/author-image.webp" alt="author" loading="lazy" />
       </div>
     </section>
     <section class="order-section">
-      <img src="./assets/img/star-bg.webp" alt="star background" loading="lazy" />
+      <img src="src/assets/img/star-bg.webp" alt="star background" loading="lazy" />
       <div class="container">
         <h2 class="hide-on-large featured-heading">NIŠTA VIŠE NEĆE BITI ISTO</h2>
         <div class="grid">
           <h2 class="hide-on-small featured-heading">NIŠTA VIŠE</h2>
-          <img src="assets/img/small-book-no-shadow.webp" alt="Book" loading="lazy" />
+          <div class="image-wrapper">
+            <img src="src/assets/img/small-book-no-shadow.webp" alt="Book" loading="lazy" />
+          </div>
           <h2 class="hide-on-small featured-heading">NEĆE BITI ISTO</h2>
           <div class="order-button-wrapper">
             <a href="https://ananas.rs/proizvod/talas-koji-dolazi/2260848" class="buy-button"
@@ -232,22 +261,31 @@
     </section>
     <footer class="footer-addendum container">
       <div class="logo-wrapper">
-        <img src="assets/img/logo.webp" alt="Entropy Logo" loading="lazy" />
+        <img src="src/assets/img/logo.webp" alt="Entropy Logo" loading="lazy" />
         <p>Entropija</p>
       </div>
       <a href="tel:+381 64 5177 648"><span>Telefon:</span> +381 64 5177 648</a>
       <a href="mailto:email@example.com"><span>E-mail:</span> entropija.izdavaštvo@gmail.com</a>
       <div class="social">
         <a href="https://www.instagram.com/entropija_izdavastvo/"
-          ><img class="svg-icon" src="assets/img/instagram.svg" alt="Instagram Icon" loading="lazy"
+          ><img
+            class="svg-icon"
+            src="src/assets/img/instagram.svg"
+            alt="Instagram Icon"
+            loading="lazy"
         /></a>
         <a href="https://www.facebook.com/profile.php?id=61550616857700">
-          <img class="svg-icon" src="assets/img/facebook.svg" alt="Facebook Icon" loading="lazy" />
+          <img
+            class="svg-icon"
+            src="src/assets/img/facebook.svg"
+            alt="Facebook Icon"
+            loading="lazy"
+          />
         </a>
       </div>
     </footer>
     <section class="footer-section">
-      <img src="assets/img/copyright.svg" alt="copyright" loading="lazy" />
+      <img src="src/assets/img/copyright.svg" alt="copyright" loading="lazy" />
       <p>2023 - 2024 ENTROPIJA</p>
     </section>
   </body>
