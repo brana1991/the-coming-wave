@@ -8,7 +8,7 @@
     <meta property="og:image" content="https://example.com/path-to-your-thumbnail-image.jpg" />
     <meta property="og:url" content="https://example.com/your-page-url" />
     <meta property="og:type" content="website" />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="styles.scss" />
 
     <!-- Optional (for better control over mobile devices) -->
     <!-- <meta name="twitter:card" content="summary_large_image" />
@@ -50,6 +50,7 @@
         <a href="mailto:email@example.com">entropija.izdavaštvo@gmail.com</a>
       </p>
     </div>
+    <button id="request-gesture-permision"></button>
     <header class="hero-navbar-wrapper container">
       <div class="logo-wrapper">
         <img src="assets/img/logo.webp" alt="Entropy Logo" />
@@ -141,7 +142,7 @@
           </a>
         </div>
       </div>
-      <div class="offer-picture">
+      <div class="offer-image">
         <img src="assets/img/book-cover.webp" loading="lazy" alt="Book" />
       </div>
       <div class="offer-button-wrapper hide-on-large">
@@ -230,7 +231,9 @@
         <h2 class="hide-on-large featured-heading">NIŠTA VIŠE NEĆE BITI ISTO</h2>
         <div class="grid">
           <h2 class="hide-on-small featured-heading">NIŠTA VIŠE</h2>
-          <img src="assets/img/small-book-no-shadow.webp" alt="Book" loading="lazy" />
+          <div class="image-wrapper">
+            <img src="assets/img/small-book-no-shadow.webp" alt="Book" loading="lazy" />
+          </div>
           <h2 class="hide-on-small featured-heading">NEĆE BITI ISTO</h2>
           <div class="order-button-wrapper">
             <a href="https://ananas.rs/proizvod/talas-koji-dolazi/2260848" class="buy-button"

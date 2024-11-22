@@ -11,7 +11,11 @@ function observeDocument() {
     stickyBanner.classList.toggle('active', !entries[0].isIntersecting);
 
     if (entries[0].isIntersecting) {
-      document.addEventListener('mousemove', handleMouseMove, { passive: true });
+      const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+
+      if (!isTouchDevice) {
+        document.addEventListener('mousemove', handleMouseMove, { passive: true });
+      }
     } else {
       document.removeEventListener('mousemove', handleMouseMove);
       document.documentElement.style.setProperty('--rotateX', '0deg');
@@ -40,11 +44,24 @@ function handleMouseMove(e) {
   document.documentElement.style.setProperty('--rotateY', rotateY);
 }
 
-function getOrientation() {
+async function getOrientation() {
   if (window.DeviceOrientationEvent) {
-    window.addEventListener('deviceorientation', handleOrientation, true);
+    const reequestPermissionButton = document.getElementById('request-gesture-permision');
+    reequestPermissionButton.addEventListener('click', requestDeviceOrientationPermission);
+
+    if (
+      typeof DeviceOrientationEvent !== 'undefined' &&
+      typeof DeviceOrientationEvent.requestPermission === 'function'
+    ) {
+      console.log('DeviceOrientationEvent requires permission.');
+      reequestPermissionButton.click();
+    } else if (typeof DeviceOrientationEvent !== 'undefined') {
+      console.log('DeviceOrientationEvent is supported without permission.');
+      window.addEventListener('deviceorientation', handleOrientation, true);
+    } else {
+      console.log('DeviceOrientationEvent is not supported on this device.');
+    }
   } else {
-    alert('DeviceOrientationEvent is not supported by your browser.');
     console.error('DeviceOrientationEvent is not supported by your browser.');
   }
 }
@@ -54,7 +71,7 @@ let currentY = 0;
 let firstOrientationEvent = true;
 
 function handleOrientation(event) {
-  const { beta, gamma } = event;
+  const { gamma } = event;
 
   const screenPosX = gamma / 180;
 
@@ -69,3 +86,14 @@ function handleOrientation(event) {
 }
 
 const getCoordinate = (pos, dim) => Math.round(((pos - dim / 2) / (dim / 2)) * 100) / 100;
+
+async function requestDeviceOrientationPermission() {
+  const permission = await DeviceOrientationEvent.requestPermission();
+
+  if (permission === 'granted') {
+    console.log('Permission granted! You can now use DeviceOrientation events.');
+    window.addEventListener('deviceorientation', handleOrientation);
+  } else {
+    console.log('Permission denied. Device orientation events will not work.');
+  }
+}

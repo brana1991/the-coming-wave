@@ -5,7 +5,6 @@
     url('assets/fonts/becket/a2_-_beckett_demibold-webfont.woff') format('woff');
   font-weight: normal;
   font-style: normal;
-  /* font-display: swap; */
 }
 
 *,
@@ -14,6 +13,10 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  -webkit-text-size-adjust: 100%;
 }
 
 img {
@@ -23,9 +26,7 @@ img {
 body {
   font-family: 'Open Sans', 'Beckett Medium Pro', sans-serif;
   font-weight: normal;
-  -webkit-text-size-adjust: 100%;
-  -webkit-font-smoothing: antialiased;
-  /* -webkit-overflow-scrolling: touch; */
+  -webkit-overflow-scrolling: touch;
   color: #222222;
 }
 
@@ -213,7 +214,14 @@ h2 {
   z-index: -1;
 }
 
+#request-gesture-permision {
+  height: 0;
+  position: absolute;
+  visibility: hidden;
+}
+
 .hero-section {
+  height: calc(100vh - 70px);
   height: calc(100svh - 70px);
   display: flex;
   flex-direction: column;
@@ -312,8 +320,10 @@ h2 {
   font-weight: 500;
 
   span {
+    transform: scale(1);
     background: -webkit-linear-gradient(#000000, #323485);
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
     width: max-content;
   }
@@ -358,30 +368,11 @@ h2 {
   flex-direction: column;
 
   img {
-    aspect-ratio: 206 / 146;
     object-fit: contain;
 
-    &:hover {
-      animation: vertical-woble 1s ease-in-out forwards;
+    @media screen and (min-width: 1200px) {
+      aspect-ratio: 206 / 146;
     }
-  }
-}
-
-@keyframes vertical-woble {
-  0% {
-    transform: translateY(0);
-  }
-  25% {
-    transform: translateY(5px);
-  }
-  50% {
-    transform: translateY(-5px);
-  }
-  75% {
-    transform: translateY(5px);
-  }
-  100% {
-    transform: translateY(0);
   }
 }
 
@@ -402,12 +393,13 @@ h2 {
   background-clip: border-box;
   border: 1px solid #222222;
   height: 100vh;
-  width: 100vw;
+  height: 100svh;
 
   img {
     display: none;
     position: absolute;
     top: 0;
+    height: 100vh;
     height: 100svh;
     width: auto;
     object-fit: cover;
@@ -483,11 +475,12 @@ h2 {
   align-items: center;
   align-content: center;
   padding-block: 64px;
-  min-height: 100svh;
 
   @media screen and (min-width: 768px) {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto auto;
+    height: calc(100vh - 56px);
+    height: calc(100svh - 56px);
   }
 
   @media screen and (min-width: 1200px) {
@@ -510,6 +503,14 @@ h2 {
     width: 100%;
     background-color: rgba(0, 0, 0, 0.1);
     border: none;
+  }
+}
+
+.offer-image {
+  width: 80%;
+
+  @media screen and (max-width: 768px) {
+    font-weight: 800;
   }
 }
 
@@ -536,8 +537,10 @@ h2 {
   display: flex;
   gap: 16px;
   flex-direction: column;
+  text-align: center;
 
   @media screen and (min-width: 768px) {
+    text-align: left;
     gap: 16px;
     align-items: flex-start;
   }
@@ -701,11 +704,12 @@ h2 {
 }
 
 .author-section {
-  min-height: 100svh;
   padding: 64px 30px;
 
   @media screen and (min-width: 1200px) {
     padding: 0;
+    min-height: calc(100vh - 56px);
+    min-height: calc(100svh - 56px);
   }
 }
 
@@ -741,19 +745,25 @@ h2 {
   position: relative;
   display: flex;
   flex-direction: column;
-  min-height: 100svh;
-  padding-block: 48px;
+  height: calc(100vh - 56px);
+  height: calc(100svh - 56px);
 
   .container {
+    padding-block: 48px;
     flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    min-height: 0;
 
     > p {
       color: white;
       text-align: center;
+
+      @media screen and (max-width: 768px) {
+        margin-top: 30px;
+      }
     }
   }
 
@@ -763,6 +773,8 @@ h2 {
     display: grid;
     align-items: center;
     grid-template-columns: 1fr;
+    grid-template-rows: auto max-content;
+    min-height: 0;
 
     @media screen and (min-width: 768px) {
       grid-template-columns: min-content 200px min-content;
@@ -777,8 +789,21 @@ h2 {
       grid-template-columns: min-content 316px min-content;
     }
 
+    .image-wrapper {
+      display: flex;
+      min-height: 0;
+      max-height: 100%;
+
+      @media screen and (max-width: 768px) {
+        padding-block: 30px;
+      }
+    }
+
     img {
       width: 100%;
+      height: auto;
+      max-height: 100%;
+      object-fit: contain;
     }
 
     h2 {
