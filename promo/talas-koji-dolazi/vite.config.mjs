@@ -2,7 +2,7 @@ import { defineConfig } from 'vite';
 import HtmlMinifier from 'vite-plugin-html-minifier';
 
 export default defineConfig({
-  base: process.env.NODE_ENV === 'production' ? '/promo/talas-koji-dolazi/' : '/', // Only apply base path in production
+  base: "/",
 
   plugins: [
     HtmlMinifier({
