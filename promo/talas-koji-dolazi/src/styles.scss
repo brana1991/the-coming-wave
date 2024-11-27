@@ -248,10 +248,11 @@ h2 {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 40px 0;
+  gap: 20px 0;
   padding-block: 40px;
 
   @media screen and (min-width: 768px) {
+    gap: 40px 0;
     -webkit-perspective: 600;
     perspective: 600;
     height: calc(100svh - 118px);
@@ -301,6 +302,17 @@ h2 {
   align-items: center;
   text-transform: uppercase;
   gap: 0 12px;
+
+  svg,
+  img {
+    width: 42px;
+    height: 42px;
+
+    @media screen and (min-width: 768px) {
+      width: 54px;
+      height: 54px;
+    }
+  }
 
   p {
     font-weight: 600;
@@ -355,18 +367,18 @@ h2 {
 }
 
 .tagline span:first-child {
-  font-size: clamp(3rem, 4.4vw, 6rem);
+  font-size: clamp(2rem, 4.4vw, 6rem);
   transform: translateY(0.5vw);
   letter-spacing: 5px;
 }
 
 .tagline span:nth-of-type(2) {
-  font-size: clamp(6.5rem, 8.2vw, 11.5rem);
+  font-size: clamp(5.5rem, 8.2vw, 11.5rem);
   letter-spacing: 5px;
 }
 
 .tagline span:last-of-type {
-  font-size: clamp(9rem, 11vw, 13.5rem);
+  font-size: clamp(8rem, 11vw, 13.5rem);
   transform: translateY(-1vw);
   letter-spacing: 7px;
 }
@@ -391,6 +403,11 @@ h2 {
 .pill {
   display: flex;
   flex-direction: column;
+  width: 40%;
+
+  @media screen and (min-width: 768px) {
+    width: unset;
+  }
 
   img {
     object-fit: contain;
