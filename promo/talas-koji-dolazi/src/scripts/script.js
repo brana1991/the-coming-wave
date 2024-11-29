@@ -93,11 +93,13 @@ async function requestDeviceOrientationPermission() {
   if (permission === 'granted') {
     const reequestPermissionButton = document.getElementById('request-gesture-permision');
     reequestPermissionButton.removeEventListener('touchstart', requestDeviceOrientationPermission);
+    reequestPermissionButton.remove();
 
     console.log('Permission granted! You can now use DeviceOrientation events.');
     window.addEventListener('deviceorientation', handleOrientation);
   } else {
     reequestPermissionButton.removeEventListener('touchstart', requestDeviceOrientationPermission);
+    reequestPermissionButton.remove();
     console.log('Permission denied. Device orientation events will not work.');
   }
 }
