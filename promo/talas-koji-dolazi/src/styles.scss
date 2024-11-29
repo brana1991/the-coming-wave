@@ -237,7 +237,6 @@ h2 {
 }
 
 #request-gesture-permision {
-  opacity: 1;
   height: 100vh;
   width: 100vw;
   position: absolute;
@@ -245,7 +244,7 @@ h2 {
   inset: 0;
   background: transparent;
   z-index: 1000;
-  background-color: blue;
+  // background-color: blue;
 }
 
 .hero-section {
