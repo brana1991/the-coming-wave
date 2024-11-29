@@ -49,6 +49,7 @@ body {
   font-weight: normal;
   -webkit-overflow-scrolling: touch;
   color: #222222;
+  position: relative;
 }
 
 h1,
@@ -236,11 +237,13 @@ h2 {
 }
 
 #request-gesture-permision {
-  height: 100px;
-  width: 100px;
+  opacity: 0;
+  // height: 100px;
   position: absolute;
   // visibility: hidden;
-  // background: transparent;
+  inset: 0;
+  background: transparent;
+  z-index: 1000;
 }
 
 .hero-section {
