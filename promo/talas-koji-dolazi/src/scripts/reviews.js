@@ -27,7 +27,7 @@ export const reviews = [
     text: '„Ako želite da shvatite značenje, obećanje i pretnju plimnog talasa tehnologija koje prete da promene svet i koje već sada narastaju i spajaju se tamo negde na pučini, onda je ova knjiga za vas.”',
     authorSrb: 'Stiven Fraj',
     authorOg: '(Stephen Fry)',
-    occupation: 'glumac, voditelj i autor bestselera ',
+    occupation: 'Glumac, voditelj i autor bestselera ',
   },
   {
     text: '„Talas koji dolazi pruža jedan prosvetljujuć i ubedljiv argument o tome da napredne tehnologije već preobražavaju svaki aspekt društva: moć, bogatstvo, ratovanje, rad, čak i ljudske odnose. Možemo li staviti pod kontrolu ove nove tehnologije pre nego što one počnu da kontrolišu nas? ”',
