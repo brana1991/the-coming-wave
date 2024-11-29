@@ -236,9 +236,11 @@ h2 {
 }
 
 #request-gesture-permision {
-  height: 0;
+  // height: 0;
   position: absolute;
-  visibility: hidden;
+  // visibility: hidden;
+  inset: 0;
+  background: transparent;
 }
 
 .hero-section {
