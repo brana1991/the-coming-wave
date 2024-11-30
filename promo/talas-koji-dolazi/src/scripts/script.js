@@ -46,9 +46,6 @@ function handleMouseMove(e) {
 
 async function getOrientation() {
   if (window.DeviceOrientationEvent) {
-    const reequestPermissionButton = document.getElementById('request-gesture-permision');
-    reequestPermissionButton.addEventListener('click', requestDeviceOrientationPermission);
-
     if (
       typeof DeviceOrientationEvent !== 'undefined' &&
       typeof DeviceOrientationEvent.requestPermission === 'function'
@@ -87,7 +84,6 @@ function handleOrientation(event) {
 const getCoordinate = (pos, dim) => Math.round(((pos - dim / 2) / (dim / 2)) * 100) / 100;
 
 async function requestDeviceOrientationPermission() {
-  const reequestPermissionButton = document.getElementById('request-gesture-permision');
   let permission;
   try {
     permission = await DeviceOrientationEvent.requestPermission();
@@ -96,13 +92,9 @@ async function requestDeviceOrientationPermission() {
   }
 
   if (permission === 'granted') {
-    reequestPermissionButton.removeEventListener('click', requestDeviceOrientationPermission);
-    reequestPermissionButton.remove();
-
     console.log('Permission granted! You can now use DeviceOrientation events.');
     window.addEventListener('deviceorientation', handleOrientation);
   } else {
-    reequestPermissionButton.remove();
     console.log('Permission denied. Device orientation events will not work.');
   }
 }
