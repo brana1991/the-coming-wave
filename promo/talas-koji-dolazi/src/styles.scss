@@ -37,6 +37,7 @@ h3,
 h4,
 p {
   font-family: 'Open Sans', sans-serif;
+  text-wrap: pretty;
 }
 
 h2 {
@@ -97,7 +98,7 @@ h2 {
 
 .container {
   width: 100%;
-  padding: 0 15px;
+  padding: 0 16px;
   margin: 0 auto;
 
   @media screen and (min-width: 1440px) {
@@ -339,9 +340,14 @@ h2 {
   display: flex;
   background-color: #222222;
   background-clip: border-box;
-  height: 100vh;
-  height: 100svh;
+  padding-block: 80px;
   outline: 1px solid #222222;
+
+  @media screen and (min-width: 1024px) {
+    height: 100vh;
+    height: 100svh;
+    padding-block: unset;
+  }
 
   img {
     display: none;
@@ -421,9 +427,10 @@ h2 {
   justify-items: center;
   align-items: center;
   align-content: center;
-  padding-block: 64px;
+  padding: 80px 16px 68px;
 
   @media screen and (min-width: 768px) {
+    padding: 0 16px;
     gap: 24px;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto auto;
@@ -550,7 +557,7 @@ h2 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-block: 64px;
+  padding-block: 80px;
 
   @media screen and (min-width: 1200px) {
     padding-block: 172px;
@@ -658,7 +665,7 @@ h2 {
   justify-content: space-between;
   text-align: center;
   max-width: 664px;
-  padding: 80px 30px;
+  padding: 80px 16px;
 
   p:not(:last-child) {
     margin-bottom: 38px;
@@ -721,7 +728,7 @@ h2 {
 }
 
 .author-text {
-  padding: 64px 16px;
+  padding: 80px 16px;
   display: flex;
   flex-direction: column;
   gap: 30px;
@@ -826,11 +833,11 @@ h2 {
 
 .footer-addendum {
   display: block;
-  padding-block: 64px;
+  padding: 80px 16px 40px 16px;
   align-content: center;
 
   @media screen and (min-width: 768px) {
-    padding-block: 112px;
+    padding: 112px 30px 90px 30px;
   }
 
   > * {
@@ -846,13 +853,34 @@ h2 {
     }
 
     &:last-of-type {
-      margin-bottom: 48px;
+      margin-bottom: 24px;
+
+      @media screen and (min-width: 768px) {
+        margin-bottom: 16px;
+      }
     }
   }
 
   .social {
     display: flex;
-    gap: 10px;
+    gap: 24px;
+    align-items: center;
+
+    @media screen and (min-width: 768px) {
+      gap: 10px;
+    }
+
+    a {
+      display: flex;
+    }
+
+    .svg-icon {
+      width: 24px;
+
+      @media screen and (min-width: 768px) {
+        width: 38px;
+      }
+    }
   }
 }
 
