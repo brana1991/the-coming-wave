@@ -26,7 +26,6 @@
     <style>
       @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;800&display=swap');
     </style>
-    <style></style>
 
     <title>Entropija - Talas Koji Dolazi</title>
     <script src="src/scripts/script.js" defer type="module"></script>
@@ -118,11 +117,11 @@
       </div>
       <div class="hero-pills">
         <div class="hero-red pill">
-          <img src="src/assets/img/red-pill.webp" alt="Red Pill" />
+          <img src="src/assets/img/red-pill.webp" alt="Red Pill" width="206px" height="146px" />
           <p class="hero-red pill-text">SEE HOW DEEP<br />THE RABBIT HOLE GOES</p>
         </div>
         <div class="hero-blue pill">
-          <img src="src/assets/img/blue-pill.webp" alt="Blue Pill" />
+          <img src="src/assets/img/blue-pill.webp" alt="Blue Pill" width="206px" height="146px" />
           <p class="hero-blue pill-text">BELIEVE WHATEVER<br />YOU WANT TO BELIEVE</p>
         </div>
       </div>
@@ -185,7 +184,16 @@
         </div>
       </div>
       <div class="offer-image">
-        <img src="src/assets/img/book-cover.webp" loading="lazy" alt="Book" />
+        <img
+          src="image-default.jpg"
+          srcset="
+            src/assets/img/book-cover-1x.webp 1x,
+            src/assets/img/book-cover-2x.webp 2x,
+            image-3x.jpg                      3x
+          "
+          loading="lazy"
+          alt="Book"
+        />
       </div>
       <div class="offer-button-wrapper hide-on-large">
         <p>Kupovina preko Ananasa</p>
