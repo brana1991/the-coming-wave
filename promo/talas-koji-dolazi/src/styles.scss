@@ -1134,3 +1134,8 @@ h2 {
     display: flex;
   }
 }
+
+.hidden-text {
+  text-indent: -999px;
+  visibility: hidden;
+}
