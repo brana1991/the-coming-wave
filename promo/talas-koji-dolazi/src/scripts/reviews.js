@@ -7,7 +7,7 @@ export const reviews = [
   },
   {
     text: '„Fascinantna, odlično napisana i važna knjiga.”',
-    authorSrb: 'Juaval Noa Harar',
+    authorSrb: 'Juaval Noa Harari',
     authorOg: '(Yuval Noah Harari)',
     occupation: 'Autor knjige Sapiens, bestselera Njujork tajmsa',
   },
