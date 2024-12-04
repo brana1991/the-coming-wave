@@ -2,7 +2,7 @@
 
 ## Overview
 
-This repository contains the source code for **The Coming New Wave**, a web application built using vanilla JavaScript, HTML, and CSS. The project uses **Vite** for bundling and development purposes. The app is currently hosted on **Vercel** and will eventually be part of the larger **[Entropija.rs](https://entropija.rs)** platform. For now, it can be accessed at the subdomain: [demo/the-coming-new-wave](https://demo.entropija.rs/the-coming-new-wave).
+This repository contains the source code for **The Coming New Wave**, a web application built using vanilla JavaScript, HTML, and CSS. The project uses **Vite** for bundling and development purposes. The app is currently hosted on **Vercel** and will eventually be part of the larger **[Entropija.rs](https://entropija.rs)** platform. For now, it can be accessed at the subdomain: [https://www.entropija.rs/promo/talas-koji-dolazi](https://www.entropija.rs/promo/talas-koji-dolazi).Currently, Entropija.rs redirects to this subdomain.
 
 ## Features
 
@@ -73,5 +73,3 @@ To deploy manually:
 ## Roadmap
 
 - Integrate into the main **Entropija.rs** platform.
-- Expand the feature set and improve the user experience.
-- Optimize for performance and accessibility.
