@@ -3,36 +3,26 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Mustafa Suleyman's 'The Coming Wave' explores how AI and synthetic biology could transform our world, offering great potential but posing serious risks. He advocates for continuous containment and global collaboration to ensure these technologies benefit humanity."
+    />
     <meta property="og:title" content="Entropija - Talas Koji Dolazi" />
-    <meta property="og:description" content="Entropija - Talas Koji Dolazi" />
-    <meta property="og:image" content="https://example.com/path-to-your-thumbnail-image.jpg" />
-    <meta property="og:url" content="https://example.com/your-page-url" />
+    <meta
+      property="og:description"
+      content="Ova revolucionarna knjiga od neprikosnovenog insajdera iz oblasti veštačke inteligencije obavezan je vodič kroz tehnološku revoluciju u zametku i promenjen svet kao njenu posledicu."
+    />
+    <meta property="og:image" content="https://www.entropija.rs/og-tag-fallback.jpg" />
+    <meta property="og:url" content="https://www.entropija.rs/promo/talas-koji-dolazi" />
+    <meta property="fb:app_id" content="177813654023872" />
     <meta property="og:type" content="website" />
+    <meta property="og:locale" content="sr_RS" />
+    <meta property="og:site_name" content="Entropija" />
+
     <link rel="stylesheet" href="src/styles.scss" />
-
-    <!-- Optional (for better control over mobile devices) -->
-    <!-- <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:image" content="https://example.com/path-to-your-thumbnail-image.jpg" /> -->
-
     <link
       rel="preload"
       href="src/assets/fonts/becket/beckett-medium-pro.woff2"
-      as="font"
-      type="font/woff2"
-      crossorigin="anonymous"
-    />
-
-    <link
-      rel="preload"
-      href="src/assets/fonts/open-sans/open-sans-v40-latin-600.woff2"
-      as="font"
-      type="font/woff2"
-      crossorigin="anonymous"
-    />
-
-    <link
-      rel="preload"
-      href="src/assets/fonts/open-sans/open-sans-v40-latin-regular.woff2"
       as="font"
       type="font/woff2"
       crossorigin="anonymous"
@@ -48,23 +38,70 @@
   </head>
   <body>
     <div id="intersecting-anchor"></div>
-    <div class="wrap hide-on-small">
-      <button class="magnetic-cta">
-        <div class="inner-circle" style="opacity: 1">
-          <p>Ostvari popust!</p>
-        </div>
-      </button>
+    <div class="discount-offer-wrapper" id="sticky-banner">
+      <div class="logo-sticky-header hide-till-desktop">
+        <svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 54 54">
+          <g clip-path="url(#a)" fill="#222">
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M0 0h54v18H21.602a9 9 0 1 0 0 18H54v18H0V0Z"
+            />
+            <path
+              d="M53.998 27a7.2 7.2 0 1 1-14.4 0 7.2 7.2 0 0 1 14.4 0ZM38.158 33.237a7.2 7.2 0 1 1 0-12.473v12.473ZM25.918 34.2V19.8a7.2 7.2 0 0 0 0 14.4ZM17.278 32.762V21.24a7.189 7.189 0 0 0-2.88 5.76 7.189 7.189 0 0 0 2.88 5.76Z"
+            />
+          </g>
+          <defs>
+            <clipPath id="a"><path fill="#fff" d="M0 0h54v54H0z" /></clipPath>
+          </defs>
+        </svg>
+        <p>Talas koji dolazi</p>
+      </div>
+      <div class="buy-box">
+        <a
+          href="mailto:info@entropija.rs"
+          aria-label="Contact us via email to get a discount"
+          class="button-wrapper"
+        >
+          <div class="buy-box-label hide-on-small">
+            <p>Ostvarite popust! Pišite nam</p>
+            <span class="hidden-text">Email us at info@entropija.rs</span>
+          </div>
+          <span class="reach-to-us">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 60 60">
+              <path
+                d="M41.216 29.026c0 3.576-.895 5.847-2.647 7.268l-.066.052c-.213.173-.448.362-.6.559a1.958 1.958 0 0 0-.311.562c-.086.233-.117.494-.144.719l-.008.062-.303 2.48c-.063.516-.102.834-.151 1.06a1.595 1.595 0 0 1-.04.151.091.091 0 0 1-.015.006 1.42 1.42 0 0 1-.137-.076 14.087 14.087 0 0 1-.868-.626l-2.98-2.244-.041-.03a3.046 3.046 0 0 0-.53-.343 2.061 2.061 0 0 0-.554-.17 3.13 3.13 0 0 0-.648-.016l-.054.002c-.496.023-1.014.034-1.553.034-4.41 0-7.28-.758-9.048-2.22-1.721-1.421-2.602-3.683-2.602-7.23 0-3.546.88-5.808 2.602-7.23 1.769-1.46 4.639-2.22 9.048-2.22 4.41 0 7.28.76 9.048 2.22 1.721 1.422 2.602 3.684 2.602 7.23Z"
+                stroke="#000"
+                stroke-width="2"
+                class="line-path"
+              ></path>
+            </svg>
+          </span>
+        </a>
+        <a href="https://ananas.rs/proizvod/talas-koji-dolazi/2260848" class="buy-button-secondary">
+          <span class="button-label">Naruči na Ananasu</span>
+          <span class="overlay-wrapper"><span></span></span>
+          <span class="hidden-text">Email us at info@entropija.rs</span>
+        </a>
+      </div>
     </div>
-    <div class="discount-offer-wrapper container" id="sticky-banner">
-      <p>
-        Ostvarite popust za kupovinu više od 10 knjiga! pišite nam na
-        <a href="mailto:email@example.com">entropija.izdavaštvo@gmail.com</a>
-      </p>
-    </div>
-    <button id="request-gesture-permision"></button>
     <header class="hero-navbar-wrapper container">
       <div class="logo-wrapper">
-        <img src="src/assets/img/logo.webp" alt="Entropy Logo" />
+        <svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 54 54">
+          <g clip-path="url(#a)" fill="#222">
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M0 0h54v18H21.602a9 9 0 1 0 0 18H54v18H0V0Z"
+            />
+            <path
+              d="M53.998 27a7.2 7.2 0 1 1-14.4 0 7.2 7.2 0 0 1 14.4 0ZM38.158 33.237a7.2 7.2 0 1 1 0-12.473v12.473ZM25.918 34.2V19.8a7.2 7.2 0 0 0 0 14.4ZM17.278 32.762V21.24a7.189 7.189 0 0 0-2.88 5.76 7.189 7.189 0 0 0 2.88 5.76Z"
+            />
+          </g>
+          <defs>
+            <clipPath id="a"><path fill="#fff" d="M0 0h54v54H0z" /></clipPath>
+          </defs>
+        </svg>
         <p>Entropija</p>
       </div>
       <a href="https://www.instagram.com/entropija_izdavastvo/"
@@ -87,11 +124,11 @@
       </div>
       <div class="hero-pills">
         <div class="hero-red pill">
-          <img src="src/assets/img/red-pill.webp" alt="Red Pill" />
+          <img src="src/assets/img/red-pill.webp" alt="Red Pill" width="206px" height="146px" />
           <p class="hero-red pill-text">SEE HOW DEEP<br />THE RABBIT HOLE GOES</p>
         </div>
         <div class="hero-blue pill">
-          <img src="src/assets/img/blue-pill.webp" alt="Blue Pill" />
+          <img src="src/assets/img/blue-pill.webp" alt="Blue Pill" width="206px" height="146px" />
           <p class="hero-blue pill-text">BELIEVE WHATEVER<br />YOU WANT TO BELIEVE</p>
         </div>
       </div>
@@ -145,19 +182,24 @@
             tehnologija pod kontrolom, kao ključni izazov našeg doba.
           </p>
         </div>
-        <hr class="line hide-on-small" />
+        <hr class="line" />
         <div class="offer-button-wrapper hide-on-small">
-          <p>Kupovina preko Ananasa:</p>
+          <p>Kupovina preko Ananasa</p>
           <a href="https://ananas.rs/proizvod/talas-koji-dolazi/2260848" class="buy-button">
             naruči odmah
           </a>
         </div>
       </div>
       <div class="offer-image">
-        <img src="src/assets/img/book-cover.webp" loading="lazy" alt="Book" />
+        <img
+          src="src/assets/img/book-cover-1x.webp"
+          srcset="src/assets/img/book-cover-1x.webp 1x, src/assets/img/book-cover-2x.webp 2x"
+          loading="lazy"
+          alt="Book"
+        />
       </div>
       <div class="offer-button-wrapper hide-on-large">
-        <p>Kupovina preko Ananasa:</p>
+        <p>Kupovina preko Ananasa</p>
         <a href="https://ananas.rs/proizvod/talas-koji-dolazi/2260848" class="buy-button">
           naruči odmah
         </a>
@@ -176,7 +218,7 @@
               (review) =>
                 `<div class="review-card">
                   <p class="review-text">${review.text}</p>
-                  <p class="review-authorSrb"><span class="dash">------</span>${review.authorSrb}<span class="review-authorOg">&nbsp${review.authorOg}</span></p>
+                  <p class="review-authorSrb"><span class="dash">------</span>${review.authorSrb}<span class="review-authorOg">&nbsp<i>${review.authorOg}</i></span></p>
                   <p class="review-occupation">${review.occupation}</p>
                 </div>`,
             )
@@ -207,65 +249,71 @@
           sa globalnim izazovima i stvaranju ogromnog bogatstva, ali i prevrata nezamislivih
           razmera.
         </p>
-        <p>UPOZNAJTE ovaj talas i počećete da shvatate budućnost pred nama.</p>
-      </div>
-    </section>
-    <section class="author-section">
-      <div class="author-grid">
-        <div class="author-text">
-          <h2>AUTORI</h2>
-          <p>
-            <span>MUSTAFA SULEJMAN</span> je izvršni direktor Majkrosoft AI-a. Prethodno je bio
-            izvršni direktor i suosnivač kompanije Inflekšn AI (Inflection AI). Pre toga je bio
-            suosnivač DipMajnda (DeepMind), jedne od vodećih svetskih kompanija u oblasti veštačke
-            inteligencije.
-          </p>
-          <p>
-            Nakon decenije u DipMajndu, postao je potpredsednik za upravljanje proizvodima i
-            procedurama u vezi sa veštačkom inteligencijom u Guglu (Google).
-          </p>
-          <p>
-            Kao student na Oksfordu, Sulejman je napustio studije kako bi učestvovao u osnivanju
-            neprofitnog telefonskog servisa za savetovanje. Živi u Palo Altu, Kalifornija.
-          </p>
-          <p>
-            <span>MAJKL BASKAR</span> je pisac i izdavač iz Ujedinjenog Kraljevstva. Autor je knjiga
-            The Content Machine, Curation i Human Frontiers.
-          </p>
-        </div>
-        <img src="src/assets/img/author-image.webp" alt="author" loading="lazy" />
-      </div>
-    </section>
-    <section class="order-section">
-      <img src="src/assets/img/star-bg.webp" alt="star background" loading="lazy" />
-      <div class="container">
-        <h2 class="hide-on-large featured-heading">NIŠTA VIŠE NEĆE BITI ISTO</h2>
-        <div class="grid">
-          <h2 class="hide-on-small featured-heading">NIŠTA VIŠE</h2>
-          <div class="image-wrapper">
-            <img src="src/assets/img/small-book-no-shadow.webp" alt="Book" loading="lazy" />
-          </div>
-          <h2 class="hide-on-small featured-heading">NEĆE BITI ISTO</h2>
-          <div class="order-button-wrapper">
-            <a href="https://ananas.rs/proizvod/talas-koji-dolazi/2260848" class="buy-button"
-              >naruči odmah
-            </a>
-          </div>
-        </div>
         <p>
-          OSTVARITE POPUST ZA KUPOVINU VIŠE OD 10 KNJIGA! PIŠITE NAM NA&nbsp;<a src="email"
-            >entropija@gmail.com</a
-          >
+          UPOZNAJTE ovaj talas i počećete da shvatate budućnost <br class="hide-on-small" />pred
+          nama.
         </p>
       </div>
     </section>
+    <section class="author-section">
+      <div class="author-text">
+        <h2>AUTORI</h2>
+        <p>
+          <span>MUSTAFA SULEJMAN</span> je izvršni direktor Majkrosoft AI-a. Prethodno je bio
+          izvršni direktor i suosnivač kompanije <i>Inflekšn AI (Inflection AI)</i>. Pre toga je bio
+          suosnivač <i>DipMajnda (DeepMind)</i>, jedne od vodećih svetskih kompanija u oblasti
+          veštačke inteligencije.
+        </p>
+        <p>
+          Nakon decenije u DipMajndu, postao je potpredsednik za upravljanje proizvodima i
+          procedurama u vezi sa veštačkom inteligencijom u Guglu (Google).
+        </p>
+        <p>
+          Kao student na Oksfordu, Sulejman je napustio studije kako bi učestvovao u osnivanju
+          neprofitnog telefonskog servisa za savetovanje. Živi u Palo Altu, Kalifornija.
+        </p>
+        <p>
+          <span>MAJKL BASKAR</span> je pisac i izdavač iz Ujedinjenog Kraljevstva. Autor je knjiga
+          The Content Machine, Curation i Human Frontiers.
+        </p>
+      </div>
+      <picture>
+        <source srcset="src/assets/img/author-image-small.webp" media="(max-width: 1200px)" />
+        <img src="src/assets/img/author-image.webp" alt="author" loading="lazy" />
+      </picture>
+    </section>
+    <section class="order-section">
+      <img src="src/assets/img/star-bg.webp" alt="star background" loading="lazy" />
+      <div class="grid">
+        <h2 class="hide-on-small featured-heading">NIŠTA VIŠE</h2>
+        <div class="image-wrapper">
+          <img src="src/assets/img/small-book.webp" alt="Book" loading="lazy" />
+        </div>
+        <h2 class="hide-on-small featured-heading">NEĆE BITI ISTO</h2>
+        <div class="order-button-wrapper hide-on-small">
+          <a href="https://ananas.rs/proizvod/talas-koji-dolazi/2260848" class="buy-button"
+            >naruči odmah
+          </a>
+        </div>
+      </div>
+      <p>
+        Ostvarite popust za kupovinu više od 5 knjiga!<br class="hide-on-large" />
+        &nbsp;Pišite nam na&nbsp;<a
+          href="mailto:info@entropija.rs"
+          aria-label="Contact us via email to get a discount"
+          >info@entropija.rs</a
+        >
+      </p>
+    </section>
     <footer class="footer-addendum container">
       <div class="logo-wrapper">
-        <img src="src/assets/img/logo.webp" alt="Entropy Logo" loading="lazy" />
+        <img src="src/assets/img/logo.svg" alt="Entropy Logo" loading="lazy" />
         <p>Entropija</p>
       </div>
       <a href="tel:+381 64 5177 648"><span>Telefon:</span> +381 64 5177 648</a>
-      <a href="mailto:email@example.com"><span>E-mail:</span> entropija.izdavaštvo@gmail.com</a>
+      <a href="mailto:info@entropija.rs" aria-label="Contact us via email to get a discount"
+        ><span>E-mail:</span> info@entropija.rs</a
+      >
       <div class="social">
         <a href="https://www.instagram.com/entropija_izdavastvo/"
           ><img

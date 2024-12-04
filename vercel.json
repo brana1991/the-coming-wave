@@ -3,7 +3,7 @@
     {
       "source": "/",
       "destination": "/promo/talas-koji-dolazi",
-      "permanent": true
+      "permanent": false
     }
   ]
 }
