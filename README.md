@@ -27,7 +27,7 @@ Make sure you have the following installed:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/your-repo-name.git
+   git clone https://github.com/brana1991/the-coming-wave.git
    ```
 2. Navigate to the project directory:
    ```bash
@@ -41,6 +41,7 @@ Make sure you have the following installed:
 ### Development
 
 Run the development server:
+
 ```bash
 npm run dev
 ```
@@ -50,6 +51,7 @@ This command starts the local development server. Open your browser and go to [h
 ### Build for Production
 
 To create an optimized build:
+
 ```bash
 npm run build
 ```
@@ -61,6 +63,7 @@ The build artifacts will be available in the `dist/` directory.
 The app is deployed on [Vercel](https://vercel.com). The `main` branch is connected to Vercel, and any changes pushed to this branch will automatically trigger a new build and deployment.
 
 To deploy manually:
+
 1. Build the project:
    ```bash
    npm run build
@@ -72,17 +75,3 @@ To deploy manually:
 - Integrate into the main **Entropija.rs** platform.
 - Expand the feature set and improve the user experience.
 - Optimize for performance and accessibility.
-
-## Contributing
-
-Contributions are welcome! Please fork the repository, make your changes, and submit a pull request. Make sure to follow the established code style and provide clear documentation for your changes.
-
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-
-## Acknowledgments
-
-- [Vite](https://vitejs.dev/) for an amazing development experience.
-- [Vercel](https://vercel.com) for seamless hosting and deployment.
-
