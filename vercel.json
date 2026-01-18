@@ -1,4 +1,10 @@
 {
+  "rewrites": [
+    {
+      "source": "/promo/nasumicno-po-volstritu/:path*",
+      "destination": "https://entropija.netlify.app/:path*"
+    }
+  ],
   "redirects": [
     {
       "source": "/",
